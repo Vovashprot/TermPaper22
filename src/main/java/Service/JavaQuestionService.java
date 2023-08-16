@@ -24,7 +24,7 @@ public class JavaQuestionService implements QuestionService {
     @Override
     public Question getRandomQuestion() {
         Random ran = new Random();
-        int random = ran.nextInt();
+        int random = ran.nextInt(questionsList.size());
         return questionsList.get(random);
     }
 
