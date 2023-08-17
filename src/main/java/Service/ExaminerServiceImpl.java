@@ -1,12 +1,13 @@
 package Service;
 
 import Question.Question;
+import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
+@Service
 public class ExaminerServiceImpl implements ExaminerService{
     private JavaQuestionService questionService = new JavaQuestionService();
     private ArrayList<Question> examineQuestions;
