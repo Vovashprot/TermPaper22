@@ -1,4 +1,4 @@
-package Question;
+package com.example.TempPaper2.Question;
 
 import java.util.Objects;
 
@@ -11,11 +11,11 @@ public class Question {
         this.answer = answer;
     }
 
-    public String getQuestion() {
+    String getQuestion() {
         return question;
     }
 
-    public String getAnswer() {
+    String getAnswer() {
         return answer;
     }
 
@@ -26,6 +26,7 @@ public class Question {
         Question question1 = (Question) o;
         return Objects.equals(question, question1.question) && Objects.equals(answer, question1.answer);
     }
+
 
     @Override
     public int hashCode() {

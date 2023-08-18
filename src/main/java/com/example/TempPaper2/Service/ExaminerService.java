@@ -1,6 +1,6 @@
-package Service;
+package com.example.TempPaper2.Service;
 
-import Question.Question;
+import com.example.TempPaper2.Question.Question;
 
 import java.util.Collection;
 

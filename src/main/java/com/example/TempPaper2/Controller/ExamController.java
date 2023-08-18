@@ -1,7 +1,6 @@
-package Controller;
+package com.example.TempPaper2.Controller;
 
-import Question.Question;
-import Service.ExaminerService;
+import com.example.TempPaper2.Service.ExaminerService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;

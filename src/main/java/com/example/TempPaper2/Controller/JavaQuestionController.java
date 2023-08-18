@@ -1,7 +1,7 @@
-package Controller;
+package com.example.TempPaper2.Controller;
 
-import Question.Question;
-import Service.QuestionService;
+import com.example.TempPaper2.Question.Question;
+import com.example.TempPaper2.Service.QuestionService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,14 +20,14 @@ public class JavaQuestionController {
 
     @GetMapping(path = "/add")
     public Question addQuestion(
-            @RequestParam("question") String question, @RequestParam("answer") String answer)
+            @RequestParam String question, @RequestParam String answer)
     {
         return service.add(question, answer);
     }
 
     @GetMapping(path = "/remove")
     public Question removeQuestion(
-            @RequestParam("question") String question, @RequestParam("answer") String answer)
+            @RequestParam String question, @RequestParam String answer)
     {
         Question removed = new Question(question,answer);
         return service.remove(removed);
