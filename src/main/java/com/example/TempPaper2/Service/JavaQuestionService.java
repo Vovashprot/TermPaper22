@@ -10,7 +10,7 @@ import java.util.*;
 
 public class JavaQuestionService implements QuestionService {
 
-    private final Set<Question> questionsList = new HashSet<Question>();
+    private final Set<Question> questionsList = new HashSet<>();
     private final Random random = new Random();
     @Override
     public Question add(String question, String answer) {
@@ -53,4 +53,11 @@ public class JavaQuestionService implements QuestionService {
         return question;
     }
 
+    @Override
+    public String toString() {
+        return "JavaQuestionService{" +
+                "questionsList=" + questionsList +
+                ", random=" + random +
+                '}';
+    }
 }
