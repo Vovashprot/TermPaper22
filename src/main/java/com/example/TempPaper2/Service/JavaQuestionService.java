@@ -1,5 +1,6 @@
 package com.example.TempPaper2.Service;
 
+import com.example.TempPaper2.Exceptions.NotEnoughQuestionsException;
 import com.example.TempPaper2.Question.Question;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,10 @@ public class JavaQuestionService implements QuestionService {
 
     @Override
     public Collection<Question> getAll() {
+        if (questionsList.isEmpty()){
+            throw new NotEnoughQuestionsException();
+        }
+
         return Collections.unmodifiableCollection(questionsList );
     }
 
@@ -47,4 +52,5 @@ public class JavaQuestionService implements QuestionService {
         questionsList.add(question);
         return question;
     }
+
 }

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collection;
 
 @RestController
-@RequestMapping( "/exam/java")
+@RequestMapping("/exam/java")
 public class JavaQuestionController {
     private final QuestionService service;
 
@@ -20,17 +20,16 @@ public class JavaQuestionController {
 
     @GetMapping(path = "/add")
     public Question addQuestion(
-            @RequestParam String question, @RequestParam String answer)
+            @RequestParam("question") String question, @RequestParam ("answer") String answer)
     {
         return service.add(question, answer);
     }
 
     @GetMapping(path = "/remove")
     public Question removeQuestion(
-            @RequestParam String question, @RequestParam String answer)
-    {
-        Question removed = new Question(question,answer);
-        return service.remove(removed);
+            @RequestParam ("question") String question,  @RequestParam ("answer") String answer)
+    {;
+        return service.remove(new Question (question,answer));
     }
 
     @GetMapping
