@@ -28,6 +28,9 @@ public class JavaQuestionService implements QuestionService {
 
     @Override
     public Question getRandomQuestion() {
+        if (questionsList.size()<1){
+            throw new NotEnoughQuestionsException();
+        }
         var ran = random.nextInt(questionsList.size());
         int i = 0;
         for (Question question : questionsList) {
