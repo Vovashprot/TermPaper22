@@ -52,12 +52,4 @@ public class JavaQuestionService implements QuestionService {
         questionsList.add(question);
         return question;
     }
-
-    @Override
-    public String toString() {
-        return "JavaQuestionService{" +
-                "questionsList=" + questionsList +
-                ", random=" + random +
-                '}';
-    }
 }
