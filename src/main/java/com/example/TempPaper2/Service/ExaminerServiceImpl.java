@@ -10,6 +10,10 @@ import java.util.*;
 public class ExaminerServiceImpl implements ExaminerService{
     private QuestionService javaQuestionService;
 
+    public ExaminerServiceImpl(QuestionService javaQuestionService) {
+        this.javaQuestionService = javaQuestionService;
+    }
+
     @Override
     public Collection<Question> getQuestions(int amount) {
         if (javaQuestionService.getAll().size() < amount){

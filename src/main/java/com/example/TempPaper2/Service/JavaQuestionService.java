@@ -19,11 +19,11 @@ public class JavaQuestionService implements QuestionService {
 
     @Override
     public Collection<Question> getAll() {
-        if (questionsList.isEmpty()){
-            throw new NotEnoughQuestionsException();
-        }
-
-        return Collections.unmodifiableCollection(questionsList );
+       // if (questionsList.isEmpty()){
+       //     throw new NotEnoughQuestionsException();
+       // }
+        Set<Question> returnSet = questionsList;
+        return returnSet ;
     }
 
     @Override
